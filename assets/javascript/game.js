@@ -1,61 +1,51 @@
+// The specific letters that the user typed.
+var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var alphabet, rand, compChoice, win, loss, gLeft, uGSF
-//1 get array of alphabet
-var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+// Setting for zero
+var wins = 0;
+var losses = 0;
+var guessesLeft = 9;
+var letterUser = [];
+var eachofLetters = null;
 
 
-win = 0;
-loss = 0;
-gLeft = 9;
-uGSF = [];
+// Sets the computerGuess variable equal to a random choice from the computerChoice array.
+var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-// functions to update
-function updateGL() {
-  document.querySelector('#g-l').innerHTML = gLeft;
+function countGuessesLeft() {
+	document.querySelector("#guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
 }
 
-function updateGSF() {
-  document.querySelector('#g-s-f').innerHTML = uGSF
+function farUserGuesses() {
+	document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letterUser.join(' ');
 }
 
-function resetCompGuess() {
-  rand = Math.floor(Math.random() * 25) + 1;
-  //get random choice from comp
-  compChoice = alphabet[rand]
+countGuessesLeft();
+
+var restart = function() {
+	guessesLeft = 9;
+	letterUser = [];
+	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
 
+// When the user presses a key, it will run the following function..
+document.onkeyup = function(event) {
+	guessesLeft--;
 
-function reset() {
-  uGSF = []
-  gLeft = 9
-  updateGSF()
-  updateGL()
-  resetCompGuess()
-}
+	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 
-//run on app start
-resetCompGuess()
-updateGL()
+	letterUser.push(userGuess);
+	countGuessesLeft();
+	farUserGuesses();
 
-//when user presses key grab the letter
-document.addEventListener("keypress", function (event) {
-  gLeft--;
-  var letter = String.fromCharCode(event.keyCode).toLowerCase();
-  if (letter === compChoice) {
-    win++;
-    document.querySelector("#w").innerHTML = win;
-    reset();
-  } else {
-    if (gLeft === 0) {
-      loss++
-      document.querySelector('#l').innerHTML = loss
-      reset()
-    } else {
-      uGSF.push(letter)
-      updateGL();
-      updateGSF()
-      resetCompGuess()
-    }
-  }
-})
-//update the ui
+	if (userGuess === computerGuess){
+		wins++;
+		document.querySelector("#wins").innerHTML = "Wins: " + wins;
+		restart();
+	} 
+	else if (guessesLeft === 0) {
+		losses++;
+		document.querySelector("#lose").innerHTML = "Loses: " + losses;
+		restart();
+	}
+  };
