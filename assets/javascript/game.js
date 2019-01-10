@@ -49,3 +49,4 @@ document.onkeyup = function(event) {
 		restart();
 	}
   };
+

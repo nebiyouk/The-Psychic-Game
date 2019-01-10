@@ -2,45 +2,55 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Psychic Game</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/style.css">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="assets/images/fave.png">
+	<title>Psychic Game</title>
+
+	<!-- Bootstrap Core CSS -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	 crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
-  <header>
-    <div class="page-header">
-      <h1>The Psychic Game</h1>
-    </div>
-  </header>
-  <center>
-  <div class="container">
-    <h2>Guess what letter i am thinking of</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <img src="assets/images/pic1.jpg" height="200" width="250" class="thumbnail" alt="...">
-      </div>
-      <div class="col-md-4">
-        <ul id="space" class="list-group">
-          <li class="list-group-item" id="wins">Wins:</li>
-          <li class="list-group-item" id="lose">Losses:</li>
-          <li class="list-group-item" id="guessesLeft">Guesses Left:</li>
-          <li class="list-group-item" id="letter">Your Guesses so far:</li>
-        </ul>
-      </div>
-      <div class="col-md-2">
-        <img src="assets/images/pic2.png" height="200" width="250" class="thumbnail" alt="...">
-      </div>
-    </div>
-  </div>
-</center>
-  <div class="footer">
-    &copy;  Copyright 2018 Nebiyou Kebede
-  </div>
-  <script src="./assets/javascript/game.js" charset="utf-8"></script>
+	<header id="masthead">
+		<div class="container">
+			<h1>The Psychic Game </h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2 class="bilu">Guess what letter I'm thinking of</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<img src="assets/images/Psychic.jpg" width="200" height="200" class="thumbnail" alt="...">
+			</div>
+			<div class="col-md-4">
+				<ul id="space" class="list-group">
+					<li class="list-group-item" id="wins">Wins:</li>
+					<li class="list-group-item" id="lose">Losses:</li>
+					<li class="list-group-item" id="guessesLeft">Guesses Left:</li>
+					<li class="list-group-item" id="letter">Your Guesses so far:</li>
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<img src="assets/images/Psychics.jpg" width="200" height="200" class="thumbnail" alt="...">
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		Copyright © 2018 by <a href="https://www.linkedin.com/in/nebiyou-kebede-78a9b4168/">Nebiyou
+			Kebede</a>, all rights reserved.</div>
+	<!-- Javascript game.js -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>
