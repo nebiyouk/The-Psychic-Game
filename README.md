@@ -1,9 +1,8 @@
-# The-Psychic-Game
+# The Psychic Game
 <br>
 <h2>Guess what letter I'm thinking of</h2>
 <p>Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose.</p>
-<p>and the will show you the result like : -</p>
-<br>
+<p>and then will show you the result like : -</p>
 <ul>
 <li>Wins: (# of times the user has guessed the letter correctly)</li>
 <li>Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)</li>
