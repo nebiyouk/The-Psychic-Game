@@ -1,3 +1,8 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+
 body {
     background-image: url("../images/bgrd.png");
     font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
